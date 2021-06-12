@@ -1,0 +1,41 @@
+@import '_variables';
+@import '_mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+h1 {
+  font-size: rem(80);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+p {
+  font-size: rem(28);
+  font-weight: 400;
+}
+
+@media #{$small} {
+  h1 {
+    font-size: rem(68);
+  }
+
+  p {
+    font-size: rem(24);
+  }
+}
+
+@media #{$tablet} {
+  h1 {
+    font-size: rem(60);
+  }
+}
+
+@media #{$mobile} {
+  h1 {
+    font-size: rem(42);
+  }
+
+  p {
+    font-size: rem(18);
+  }
+}

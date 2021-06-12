@@ -1,0 +1,33 @@
+@import '../styles/_variables';
+@import '../styles/_mixins';
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: color 0.2s ease-out;
+  font-size: rem(16);
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background-color: var(--black);
+    height: 2px;
+    width: 0;
+    transition: width 0.2s ease-out;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+
+  @media #{$mobile} {
+    font-size: rem(14);
+  }
+}

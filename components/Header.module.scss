@@ -1,0 +1,14 @@
+@import '../styles/_variables';
+@import '../styles/_mixins';
+
+.header {
+  height: $header-height;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$mobile} {
+    height: $header-height-mobile;
+  }
+}

@@ -1,0 +1,77 @@
+@import '../styles/_variables';
+@import '../styles/_mixins';
+
+.container {
+  &,
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+.content-container {
+  padding: rem(85);
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex: 1;
+
+  .portrait-container {
+    position: relative;
+
+    img {
+      width: 35vw;
+      max-width: 500px;
+      object-fit: contain;
+      object-position: top;
+      display: block;
+      flex: 0 1 100%;
+    }
+  }
+
+  .content-text {
+    padding: rem(80);
+    flex: 1 1 0;
+
+    h1 {
+      margin: 0;
+
+      .highlight {
+        color: white;
+        background: linear-gradient(to bottom, transparent 20%, var(--orange) 20%, var(--orange) 90%, transparent 90%);
+      }
+    }
+  }
+
+  @media #{$large} {
+    padding: rem(50);
+
+    .content-text {
+      padding: rem(50);
+    }
+  }
+
+  @media #{$tablet} {
+    padding: rem(30);
+    flex-direction: column-reverse;
+    flex: unset;
+
+    .portrait-container img {
+      width: 50vw;
+      max-width: 100%;
+    }
+
+    .content-text {
+      padding: 0;
+    }
+  }
+
+  @media #{$mobile} {
+    .background-pattern {
+      display: none;
+    }
+  }
+}

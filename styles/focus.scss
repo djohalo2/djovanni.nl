@@ -1,0 +1,9 @@
+*:focus {
+  outline: none;
+}
+
+.floating-focus-enabled :focus,
+.floating-focus-enabled .focus {
+  outline: #fca61f solid 2px;
+  outline-offset: 8px;
+}
