@@ -8,6 +8,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="icon" href="/favicon.ico" />
           <style type="text/css" dangerouslySetInnerHTML={{ __html: mediaStyle }} />
         </Head>
         <body>

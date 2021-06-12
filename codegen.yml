@@ -1,7 +1,0 @@
-schema: ./schema.docs.graphql
-documents: './services/*.{ts,tsx}'
-generates:
-  ./model/github.ts:
-    plugins:
-      - typescript
-      - typescript-operations
